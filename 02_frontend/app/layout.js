@@ -17,32 +17,7 @@ export default function RootLayout({ children }) {
         }}
       >
 
-        {/* Navbar */}
-        <nav
-          style={{
-            width: "100%",
-            padding: "15px 25px",
-            background: "#4b2e2b",
-            color: "white",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
-          }}
-        >
-          <h2 style={{ margin: 0 }}>Fresh Coffee ☕</h2>
-
-          <div style={{ display: "flex", gap: "20px" }}>
-            <a href="/" style={{ color: "white", textDecoration: "none" }}>Home</a>
-            <a href="/menu" style={{ color: "white", textDecoration: "none" }}>Menu</a>
-            <a href="/cart" style={{ color: "white", textDecoration: "none" }}>
-              🛒 Cart
-            </a>
-          </div>
-        </nav>
-
-        <main style={{ minHeight: "80vh" }}>{children}</main>
-
+         
         {/* Footer */}
         <footer
           style={{
