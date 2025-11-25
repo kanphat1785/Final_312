@@ -1,7 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 export const metadata = {
-  title: "Fresh Coffee",
+  title: "Home Coffee",
   description: "Your favorite coffee shop",
 };
 
