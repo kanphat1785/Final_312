@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function MenuPage() {
   const [menu, setMenu] = useState([]);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API}/products`)
+    fetch(`${process.env.NEXT_PUBLIC_API_HOST}/products`)
       .then((res) => res.json())
       .then(setMenu);
   }, []);
@@ -39,8 +40,11 @@ export default function MenuPage() {
               padding: "15px",
             }}
           >
-            <img
-              src={item.image}
+            <Image
+              src={item.image || "/default-coffee.jpg"} // fallback image
+              alt={item.name || "Coffee image"}
+              width={300} // ขนาดสำหรับ layout
+              height={180}
               style={{
                 width: "100%",
                 height: "180px",

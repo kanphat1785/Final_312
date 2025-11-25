@@ -8,11 +8,14 @@ const nextConfig = {
   },
 
   reactStrictMode: true,
+  
   images: {
-    domains: ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYfE4fnUPGLsOY-6HVFZIXXR_8W4yT0bUKkQ&s','https://comencrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR8Q_RrELDLpBSuhHF9CEAWgSBo9mRQtSy-g&s','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqrb93v-Kx_YJnZANXJcRhUSCsuH3HiOfoGQ&s'],
+    domains: [
+      'encrypted-tbn0.gstatic.com',
+      'comencrypted-tbn0.gstatic.com',
+      // เพิ่มโดเมนอื่นๆ ถ้ามี
+    ],
   },
 };
 
-
 export default nextConfig;
-
