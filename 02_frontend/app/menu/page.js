@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function MenuPage() {
   const [menu, setMenu] = useState([]);
@@ -9,6 +10,10 @@ export default function MenuPage() {
     fetch(`${process.env.NEXT_PUBLIC_API}/products`)
       .then((res) => res.json())
       .then(setMenu);
+
+    // โหลดตะกร้าเก่าจาก localStorage
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) setCart(JSON.parse(savedCart));
   }, []);
 
   const addToCart = (item) => {
@@ -39,8 +44,11 @@ export default function MenuPage() {
               padding: "15px",
             }}
           >
-            <img
+            <Image
               src={item.image}
+              alt={item.name} // ใส่ alt
+              width={300} // หรือปรับขนาดตามต้องการ
+              height={180}
               style={{
                 width: "100%",
                 height: "180px",
